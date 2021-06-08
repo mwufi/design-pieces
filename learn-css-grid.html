@@ -1,0 +1,56 @@
+<head>
+  <link
+    href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    .inline-grid {
+      grid-template-columns: repeat(8, 50px);
+      justify-content: center;
+      grid-gap: 6px;
+      width: 100%;
+      height: 100%;
+    }
+    .inside {
+      border-radius: 3px;
+      background: #fdd835;
+      height: 50px;
+      width: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.4em;
+      box-shadow: 0 0.15rem 0 #ff8f00;
+      font-weight: bold;
+    }
+    .top {
+        align-self: end;
+    }
+    #space1 {
+      grid-column: 6/9;
+      background: #ff8f00;
+    }
+    #space2 {
+      background: #ff8f00;
+    }
+  </style>
+</head>
+
+<div class="demo">
+  <div class="inline-grid">
+    <span class="inside top">L</span>
+    <span class="inside top">E</span>
+    <span class="inside top">A</span>
+    <span class="inside top">R</span>
+    <span class="inside top">N</span>
+    <span id="space1"></span>
+    <span class="inside">C</span>
+    <span class="inside">S</span>
+    <span class="inside">S</span>
+    <span id="space2"></span>
+    <span class="inside">G</span>
+    <span class="inside">R</span>
+    <span class="inside">I</span>
+    <span class="inside">D</span>
+  </div>
+</div>
