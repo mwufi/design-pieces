@@ -13,8 +13,9 @@
       align-items: center;
     }
     .square {
-      width: 320px;
       height: 320px;
+      max-width: 320px;
+      width: 100%;
     }
     .fit {
       object-fit: cover;
@@ -54,7 +55,7 @@
   <div class="header flex space-between m-4">
     <div class="a"></div>
     <div class="flex flex-col items-center text-white">
-      <p class="text-xs uppercase">Playing from playlist</p>
+      <p class="text-xxs uppercase text-gray-300">Playing from playlist</p>
       <p class="text-sm font-semibold">Daily Mix 4</p>
     </div>
     <div class="a"></div>
@@ -66,8 +67,8 @@
     />
   </div>
   <div class="w-full my-4">
-    <p class="text-2xl text-white">Badman Style</p>
-    <p class="text-sm text-gray-400 mt-1">Painted Skies</p>
+    <p class="text-xl text-white font-semibold">Badman Style</p>
+    <p class="text-sm text-gray-400">Painted Skies</p>
   </div>
   <div class="w-full my-4">
     <input class="w-full" type="range" id="seek-slider" max="100" value="0" />
