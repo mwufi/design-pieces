@@ -25,33 +25,14 @@
       background: url("./Photos/one.jpg");
       background-size: cover;
     }
-    .parent {
-      position: relative;
-    }
-    .bar {
-      height: 5px;
-    }
-    .bar-inner {
-      width: 30%;
-    }
-    .song-progress {
-      height: 20px;
-      width: 20px;
-      top: 0;
-      left: 0;
-      background: white;
-      position: absolute;
-    }
+
     body {
       font-size: 62.5%;
     }
   </style>
 </head>
-<div
-  class="demo h-full border bg-gray-800 p-8 flex-col false-background1"
-></div>
 
-<div class="demo h-full border bg-gray-800 p-8 flex-col">
+<div class="demo h-full bg-gray-800 p-8 flex-col">
   <div class="header flex space-between m-4">
     <div class="a"></div>
     <div class="flex flex-col items-center text-white">
@@ -62,7 +43,7 @@
   </div>
   <div class="w-full h-1/2 relative m-4">
     <img
-      class="absolute h-full w-full object-cover rounded-xl"
+      class="absolute h-full w-full object-cover rounded"
       src="https://images.unsplash.com/photo-1440342359743-84fcb8c21f21?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2550&q=80"
     />
   </div>
@@ -71,6 +52,35 @@
     <p class="text-sm text-gray-400">Painted Skies</p>
   </div>
   <div class="w-full my-4">
+    <input class="w-full" type="range" id="seek-slider" max="100" value="0" />
+  </div>
+</div>
+
+<div
+  class="demo h-full bg-gray-800 p-8 flex-col false-background1"
+></div>
+
+<!-- second album -->
+<div class="demo h-full bg-gray-800 p-6 flex-col">
+  <div class="flex space-between m-2 mb-4">
+    <div class="a"></div>
+    <div class="flex flex-col items-center text-white">
+      <p class="text-xxs uppercase text-gray-300">Playing from playlist</p>
+      <p class="text-sm font-semibold">Daily Mix 4</p>
+    </div>
+    <div class="a"></div>
+  </div>
+  <div class="w-full h-1/2 relative my-8">
+    <img
+      class="absolute h-full w-full object-cover rounded"
+      src="https://images.genius.com/b4c7a06136f65ed7900a9b33e979194c.500x500x1.jpg"
+    />
+  </div>
+  <div class="w-full mt-8 p-2">
+    <p class="text-xl text-white font-semibold">Q&A</p>
+    <p class="text-sm text-gray-400">Kina Grannis</p>
+  </div>
+  <div class="w-full my-2">
     <input class="w-full" type="range" id="seek-slider" max="100" value="0" />
   </div>
 </div>
