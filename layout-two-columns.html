@@ -15,7 +15,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      border: 1px solid #ddd;
     }
     .panel {
       border-top: 4px solid #ddd;
@@ -33,49 +32,160 @@
   </style>
 </head>
 
-<div class="demo h-full border">
-  <div id="vue-app1" class="grid grid-cols-3 w-full">
-    <div class="panel col-start-2 border mb-4">
-      <div class="panel-header font-bold p-1 px-4 text-sm">Basic Info</div>
-      <div class="panel-content text-sm px-4">
-        <table class="table-fixed w-full mb-2">
-          <tbody>
-            <tr v-for="item in stats" class="border-b">
-              <td class="w-1/2 p-1 text-sm pl-0">{{item.x}}</td>
-              <td class="w-1/2 p-1 text-sm">{{item.y}}</td>
-            </tr>
-          </tbody>
-        </table>
+<body id="vue-app1">
+
+  <!-- full app -->
+  <div class="demo border">
+    <main class="grid grid-cols-3 w-full">
+      <div class="col-span-2 px-2 demo flex-col">
+        <!-- chart -->
+        <div class="panel border mb-4">
+          <div class="panel-header font-bold p-1 px-4 text-sm">
+            Level Prices
+          </div>
+          <div class="panel-content text-sm flex flex-col">
+            <div class="m-3 p-3 border border-blue-500 text-xl font-medium">View and download this data back to 2014. <a class="text-blue-500" href="#">Upgrade now.</a></div>
+         
+          </div>
+        </div>
+
+        <!-- historical prices -->
+        <div class="panel border mb-4">
+          <div class="panel-header font-bold p-1 px-4 text-sm">
+            Historical Prices
+          </div>
+          <div class="panel-content text-sm flex flex-col">
+            <div class="m-3 p-3 border border-blue-500 text-xl font-medium">View and download this data back to 2014. <a class="text-blue-500" href="#">Upgrade now.</a></div>
+           <div class="flex">
+            <div class="px-4">
+              <table class="table-fixed w-full my-2">
+                <thead class="border-b text-sm">
+                  <tr>
+                    <th class="text-left">Date</th>
+                    <th class="text-right">Value</th>
+                  </tr>
+                </thead>
+                </thead>
+                <tbody>
+                  <tr v-for="item in historicalPrices.left" class="border-b">
+                    <td class="w-1/2 p-1 text-sm pl-0">{{item.date}}</td>
+                    <td class="text-right w-1/2 p-1 text-sm">{{item.amount}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="px-4">
+              <table class="table-fixed w-full my-2">
+                <thead class="border-b text-sm">
+                  <tr>
+                    <th class="text-left">Date</th>
+                    <th class="text-right">Value</th>
+                  </tr>
+                </thead>
+                </thead>
+                <tbody>
+                  <tr v-for="item in historicalPrices.right" class="border-b">
+                    <td class="w-1/2 p-1 text-sm pl-0">{{item.date}}</td>
+                    <td class="text-right w-1/2 p-1 text-sm">{{item.amount}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+           </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-span-1 px-2">
+        <!-- part 1 -->
+        <div class="panel border mb-4">
+          <div class="panel-header font-bold p-1 px-4 text-sm">Basic Info</div>
+          <div class="panel-content text-sm px-4">
+            <table class="table-fixed w-full mb-2">
+              <tbody>
+                <tr v-for="item in basicInfo" class="border-b">
+                  <td class="w-1/2 p-1 text-sm pl-0">{{item.x}}</td>
+                  <td class="w-1/2 p-1 text-sm">{{item.y}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- stats -->
+        <div class="panel border mb-4">
+          <div class="panel-header font-bold p-1 px-4 text-sm">Stats</div>
+          <div class="panel-content text-sm px-4">
+            <table class="table-fixed w-full mb-2">
+              <tbody>
+                <tr v-for="item in stats" class="border-b">
+                  <td class="w-1/2 p-1 text-sm pl-0">{{item.x}}</td>
+                  <td class="w-1/2 p-1 text-sm">{{item.y}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- part 3 -->
+        <div class="panel col-start-2 border mb-4">
+          <div class="panel-header font-bold p-1 px-4 text-sm">
+            Related Indicators
+          </div>
+          <div class="panel-content text-sm px-4">
+            <table class="table-fixed w-full mb-2">
+              <tbody>
+                <tr v-for="(value, name) in indicators" class="border-b">
+                  <td class="w-1/2 p-1 text-sm pl-0">{{name}}</td>
+                  <td class="text-right w-1/2 p-1 text-sm">{{value}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- components -->
+
+  <div class="demo h-full border">
+    <div class="grid grid-cols-3 w-full">
+      <!-- float left -->
+      <div class="panel col-start-2 border mb-4">
+        <div class="panel-header font-bold p-1 px-4 text-sm">Basic Info</div>
+        <div class="panel-content text-sm px-4">
+          <table class="table-fixed w-full mb-2">
+            <tbody>
+              <tr v-for="item in basicInfo" class="border-b">
+                <td class="w-1/2 p-1 text-sm pl-0">{{item.x}}</td>
+                <td class="w-1/2 p-1 text-sm">{{item.y}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- float right -->
+      <div class="panel col-start-2 border mb-4">
+        <div class="panel-header font-bold p-1 px-4 text-sm">
+          Related Indicators
+        </div>
+        <div class="panel-content text-sm px-4">
+          <table class="table-fixed w-full mb-2">
+            <tbody>
+              <tr v-for="(value, name) in indicators" class="border-b">
+                <td class="w-1/2 p-1 text-sm pl-0">{{name}}</td>
+                <td class="text-right w-1/2 p-1 text-sm">{{value}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="demo h-full border">
-  <main class="vue-app grid grid-cols-3 w-full">
-    <div class="col-span-2 px-2 demo flex-col">
-      <div class="panel">
-        <div class="panel-header">Level Chart</div>
-        <div class="panel-content">Level Chart</div>
-      </div>
-      <div class="panel">
-        <div class="panel-header">Historical Data</div>
-        <div class="panel-content">Historical Data</div>
-      </div>
-    </div>
-    <div class="col-span-1 px-2 demo flex-col">
-      <div class="panel">
-        <div class="panel-header">Basic Info</div>
-        <div class="panel-content">Basic Info</div>
-      </div>
-      <div class="panel">
-        <div class="panel-header">Stats</div>
-        <div class="panel-content">Stats</div>
-      </div>
-    </div>
-  </main>
-</div>
-
+</body>
 <script>
   const Counter = {
     data() {
@@ -91,7 +201,41 @@
           { x: "Last value", y: "2386.0" },
           { x: "Last value", y: "2386.0" },
         ],
+        basicInfo: [
+          { x: "Report", y: "CoinGecko" },
+          { x: "Category", y: "Cryptocurrency" },
+          { x: "Region", y: "N/A" },
+          { x: "Source", y: "2386.0" },
+        ],
+        indicators: {
+          "Bitcoin Average Cost Per Transaction": "114.50 USD/tx",
+          "Bitcoin Cash Price": "601.45 USD",
+          "Bitcoin Price": "12312.22 USD",
+        },
       };
+    },
+    computed: {
+      historicalPrices() {
+        var now = new Date();
+        var daysOfYear = [];
+        for (
+          var d = new Date(2021, 3, 22);
+          d <= now;
+          d.setDate(d.getDate() + 1)
+        ) {
+          daysOfYear.push(new Date(d));
+        }
+        daysOfYear.reverse()
+        var length = daysOfYear.length / 2;
+        return {
+          left: daysOfYear
+            .slice(0, length)
+            .map((date, i) => ({ date, amount: i })),
+          right: daysOfYear
+            .slice(length, -1)
+            .map((date, i) => ({ date, amount: i })),
+        };
+      },
     },
   };
 
