@@ -29,12 +29,25 @@
     .panel-content {
       border-bottom: 1px solid #ddd;
     }
+
+    .title {
+      width: 600px;
+      padding: 1em;
+      font-size: 2em;
+    }
+    .subtitle {
+      font-size: x-large;
+    }
+    body {
+      overscroll-behavior-y: none;
+    }
   </style>
 </head>
 
 <body id="vue-app1">
 
   <!-- full app -->
+  <div class="title">Stuff<span class="subtitle italic ml-6 text-gray-500">Explorations in layout</span></div>
   <div class="demo border">
     <main class="grid grid-cols-3 w-full">
       <div class="col-span-2 px-2 demo flex-col">
