@@ -1,0 +1,99 @@
+<head>
+  <link
+    href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+  <script src="https://unpkg.com/vue@next"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    .demo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #ddd;
+    }
+    .panel {
+      border-top: 4px solid #ddd;
+      width: 100%;
+      font-family: "Roboto Condensed", sans-serif;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
+    .panel-header {
+      border-bottom: 1px solid #ddd;
+    }
+    .panel-content {
+      border-bottom: 1px solid #ddd;
+    }
+  </style>
+</head>
+
+<div class="demo h-full border">
+  <div id="vue-app1" class="grid grid-cols-3 w-full">
+    <div class="panel col-start-2 border mb-4">
+      <div class="panel-header font-bold p-1 px-4 text-sm">Basic Info</div>
+      <div class="panel-content text-sm px-4">
+        <table class="table-fixed w-full mb-2">
+          <tbody>
+            <tr v-for="item in stats" class="border-b">
+              <td class="w-1/2 p-1 text-sm pl-0">{{item.x}}</td>
+              <td class="w-1/2 p-1 text-sm">{{item.y}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="demo h-full border">
+  <main class="vue-app grid grid-cols-3 w-full">
+    <div class="col-span-2 px-2 demo flex-col">
+      <div class="panel">
+        <div class="panel-header">Level Chart</div>
+        <div class="panel-content">Level Chart</div>
+      </div>
+      <div class="panel">
+        <div class="panel-header">Historical Data</div>
+        <div class="panel-content">Historical Data</div>
+      </div>
+    </div>
+    <div class="col-span-1 px-2 demo flex-col">
+      <div class="panel">
+        <div class="panel-header">Basic Info</div>
+        <div class="panel-content">Basic Info</div>
+      </div>
+      <div class="panel">
+        <div class="panel-header">Stats</div>
+        <div class="panel-content">Stats</div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script>
+  const Counter = {
+    data() {
+      return {
+        stats: [
+          { x: "Last value", y: "2386.0" },
+          { x: "Latest Period", y: "2386.0" },
+          { x: "Last Updated", y: "2386.0" },
+          { x: "Next Release", y: "2386.0" },
+          { x: "Average Growth Rate", y: "196%" },
+          { x: "Value from 1 Year Ago", y: "2386.0" },
+          { x: "Last value", y: "2386.0" },
+          { x: "Last value", y: "2386.0" },
+          { x: "Last value", y: "2386.0" },
+        ],
+      };
+    },
+  };
+
+  Vue.createApp(Counter).mount("#vue-app1");
+</script>
