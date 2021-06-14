@@ -22,71 +22,89 @@
     .n {
       overflow: hidden;
     }
+    .comment {
+      border-left: 3px solid #999;
+      padding-left: 1.5em;
+      margin-left: 1.5em;
+      margin-bottom: 1.5em;
+    }
   </style>
 </head>
 
 <div class="demo min-h-full">
-  <div class="main min-h-full w-full lg:grid lg:grid-cols-3 border">
-    <aside
-      class="
-        sidebar
-        flex flex-col
-        items-center
-        justify-center
-        lg:w-full
-        lg:h-screen
-      "
-    >
-      <a href="#" class="underline">part of the encritto</a>
-    </aside>
-    <main class="content flex flex-col items-center divide-y divide-gray-300">
-      <!-- a text card -->
-      <div class="card bg-white">
-        <div class="prose p-6">
-          <h4>Some content</h4>
-          <p>
-            By default, Tailwind’s width scale is a combination of the default
-            spacing scale as well as some additional values specific to widths.
-            You can customize the spacing scale for padding, margin, width, and
-            height all at once in the theme.spacing or theme.extend.spacing
-            sections of your tailwind.config.js file:
+  <main class="content flex flex-col items-center divide-y divide-gray-300">
+    <!-- a text card -->
+    <div class="card bg-white">
+      <div class="prose p-6">
+        <h4>Some content</h4>
+        <p>
+          By default, Tailwind’s width scale is a combination of the default
+          spacing scale as well as some additional values specific to widths.
+          You can customize the spacing scale for padding, margin, width, and
+          height all at once in the theme.spacing or theme.extend.spacing
+          sections of your tailwind.config.js file:
+        </p>
+        <a href="#">Read more...</a>
+      </div>
+    </div>
+
+    <!-- an image card -->
+    <div class="card bg-white overflow-hidden">
+      <img
+        src="https://64.media.tumblr.com/0a650ccb1c6a1c1b952cafbe88c700d5/tumblr_n0369tejug1tpbn20o1_1280.jpg"
+      />
+      <div class="py-6">
+        <div class="comment text-xs">
+          <p class="text-xs text-gray-500 font-light leading-loose comment">
+            Sometimes the best business cards are the most minimal. Instead of
+            trying to slap every effect you can do on to a business card, you’re
+            much better off just keeping to the basics. Just a plain card, with
+            your logo if you have one, name and contact details. You should be
+            letting your work do all the talking, not your business card.
           </p>
-          <a href="#">Read more...</a>
+          <div class="text-gray-500 font-light">Source: <a>link</a></div>
         </div>
+        <a href="#">Read more...</a>
       </div>
+    </div>
 
-      <!-- an image card -->
-      <div class="card bg-white overflow-hidden">
-        <img src="/public/mountain.jpeg" />
-        <div class="prose p-6">
-          <p>i like my content, thank you very much</p>
-          <a href="#">Read more...</a>
-        </div>
+    <!-- an image card -->
+    <div class="card bg-white overflow-hidden">
+      <img
+        src="https://64.media.tumblr.com/0a650ccb1c6a1c1b952cafbe88c700d5/tumblr_n0369tejug1tpbn20o1_1280.jpg"
+      />
+      <div class="py-6">
+        <p class="text-xs text-gray-500 font-light leading-loose comment">
+          Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod
+          tempor incidunt ut labore et dolore magna aliqua. Ab illo tempore, ab
+          est sed immemorabili. Tu quoque, Brute, fili mi, nihil timor populi,
+          nihil! Ut enim ad minim veniam, quis nostrud exercitation
+        </p>
+        <a href="#">Read more...</a>
       </div>
+    </div>
+    <!-- a text card -->
+    <div class="card bg-white">
+      <div class="prose p-6">
+        <h4>Some content</h4>
+        <p>i like my content, thank you very much</p>
+        <a href="#">Read more...</a>
+      </div>
+    </div>
 
-      <!-- a text card -->
-      <div class="card bg-white">
-        <div class="prose p-6">
-          <h4>Some content</h4>
-          <p>i like my content, thank you very much</p>
-          <a href="#">Read more...</a>
-        </div>
+    <!-- an image card -->
+    <div class="card bg-white overflow-hidden">
+      <img src="/public/mountain.jpeg" />
+      <div class="prose p-6">
+        <p>I mean, just <em>look at this</em></p>
+        <ul>
+          <li>perfectly fine</li>
+          <li>it's part of the prose</li>
+          <li>once i figure out what it is, can look at it?</li>
+        </ul>
       </div>
-
-      <!-- an image card -->
-      <div class="card bg-white overflow-hidden">
-        <img src="/public/mountain.jpeg" />
-        <div class="prose p-6">
-          <p>I mean, just <em>look at this</em></p>
-          <ul>
-            <li>perfectly fine</li>
-            <li>it's part of the prose</li>
-            <li>once i figure out what it is, can look at it?</li>
-          </ul>
-        </div>
-        <img src="/public/mountain.jpeg" />
-        <img src="/public/mountain.jpeg" />
-      </div>
-    </main>
-  </div>
+      <img src="/public/mountain.jpeg" />
+      <img src="/public/mountain.jpeg" />
+    </div>
+  </main>
 </div>
