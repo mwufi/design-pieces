@@ -1,0 +1,148 @@
+<head>
+  <link
+    href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+  <title>Design</title>
+  <link
+    href="/public/favicon-96.png"
+    rel="icon"
+    type="image/png"
+    sizes="96x96"
+  />
+  <script src="https://unpkg.com/vue@next"></script>
+  <link href="/common.css" rel="stylesheet" />
+  <style>
+    tr + * {
+      margin-top: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 0.5em;
+    }
+    .n {
+      width: 100%;
+      max-width: 1024px;
+    }
+    th {
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+    tbody > tr {
+      box-shadow: 0 0 2px 0 #ddd;
+      transition: all 0.2s ease-in-out 0s;
+    }
+    tbody > tr:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+      transform: scaleX(0.99);
+    }
+  </style>
+</head>
+
+<div class="demo h-full" id="vue-app1">
+  <div class="n">
+    <table class="">
+      <thead>
+        <tr class="text-sm font-semibold text-gray-400">
+          <th class="text-left">Asset</th>
+          <th class="text-left">Type</th>
+          <th class="float-right">
+            <button class="font-bold flex text-gray-400">
+              <div>Dai Available</div>
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </div>
+            </button>
+          </th>
+          <th class="text-right">
+            <button class="font-bold">Dai Available</button>
+          </th>
+          <th class="text-right">
+            <button class="font-bold">Dai Available</button>
+          </th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="rounded-lg font-light" v-for="coin in stuff">
+          <td class="p-4 text-left font-semibold">{{coin.asset}}</td>
+          <td class="p-4 text-left">{{coin.type}}</td>
+          <td class="p-4 text-right">{{coin.dai}}</td>
+          <td class="p-4 text-right">{{coin.fee}}</td>
+          <td class="p-4 text-right">{{coin.collateral}}</td>
+          <td class="p-4 text-right">
+            <button class="px-8 py-2 rounded-full text-sm bg-gray-100">
+              Open Vault
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+  const App = {
+    data() {
+      return {
+        stuff: [
+          {
+            asset: "USD Coin",
+            type: "USDC-A",
+            dai: "45.6M",
+            fee: "4.50%",
+            collateral: "150%",
+            available: true,
+          },
+          {
+            asset: "Wrapped Bitcoin",
+            type: "USDC-A",
+            dai: "45.6M",
+            fee: "4.50%",
+            collateral: "150%",
+            available: true,
+          },
+          {
+            asset: "USD Coin",
+            type: "USDC-A",
+            dai: "45.6M",
+            fee: "4.50%",
+            collateral: "150%",
+            available: true,
+          },
+          {
+            asset: "Ether",
+            type: "ETH-C",
+            dai: "123.46M",
+            fee: "3.00%",
+            collateral: "175%",
+            available: true,
+          },
+          {
+            asset: "Paxos Standard",
+            type: "PAXUSD_A",
+            dai: "0.00",
+            fee: "1.00%",
+            collateral: "101%",
+            available: true,
+          },
+        ],
+      };
+    },
+  };
+  Vue.createApp(App).mount("#vue-app1");
+</script>
