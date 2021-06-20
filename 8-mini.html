@@ -21,7 +21,7 @@
       position: fixed;
       left: 0;
       bottom: 0;
-      height: calc(100vh - 100px);
+      height: calc(100vh - 60px);
     }
     .line {
       background-image: linear-gradient(
@@ -44,28 +44,54 @@
       grid-column-gap: 4%;
       grid-row-gap: 1.5em;
     }
+    .header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+    .s {
+      min-width: 170px;
+    }
+    .main-grid {
+      grid-template-columns: 170px 1fr 170px;
+    }
   </style>
 </head>
+
 <body id="app">
-  <!-- individual components -->
-
-  <!-- the insides -->
-  <div class="demo min-h-full">
-    <div class="grid container sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-      <div class="item" v-for="item in items">
-        <div class="palette rounded-xl bg-gray-200 mb-3"></div>
-        <div class="flex justify-between items-center">
-          <button class="rounded-xl border p-2 text-sm like-button">
-            {{item.likes}}
-          </button>
-          <div class="text-xs text-gray-500">{{item.time}}</div>
-        </div>
-      </div>
+  <div class="grid main-grid min-h-full w-full">
+    <!-- header -->
+    <div
+      class="
+        grid
+        main-grid
+        items-center
+        header
+        border-b border-gray-100
+        bg-white
+        opacity-80
+        p-2
+        px-8
+      "
+    >
+      <div class="text-lg s">{{title}}</div>
+      <input
+        type="text"
+        :placeholder="searchText"
+        class="
+          p-3
+          px-4
+          rounded-full
+          outline-none
+          border
+          text
+          w-full
+          text-gray-700
+        "
+      />
+      <button class="right">...</button>
     </div>
-  </div>
-
-  <!-- 
-  <div class="demo h-full">
+    <!-- sidebar -->
     <div class="flex flex-col fixed-sidebar text-gray-600 p-4 py-6">
       <div
         class="rounded-md hover:bg-gray-50 py-2 pl-4 text-lg w-full"
@@ -83,10 +109,24 @@
         </div>
       </div>
     </div>
+    <div id="placeholder for left column"></div>
+    <div
+      class="grid w-4/5 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 w-full"
+      style="margin-top: 100px"
+    >
+      <div class="item" v-for="item in items">
+        <div class="palette rounded-xl bg-gray-200 mb-3"></div>
+        <div class="flex justify-between items-center">
+          <button class="rounded-xl border p-2 text-sm like-button">
+            {{item.likes}}
+          </button>
+          <div class="text-xs text-gray-500">{{item.time}}</div>
+        </div>
+      </div>
+    </div>
   </div>
 
-   -->
-  <!-- the menu -->
+  <!-- individual components -->
   <div class="demo h-full">
     <div class="flex flex-col sidebar text-gray-500 font-light">
       <div
@@ -114,6 +154,8 @@
   const App = {
     data() {
       return {
+        title: "The Club Collection",
+        searchText: "Search palettes",
         items: [
           { likes: 82, time: "15 hours" },
           { likes: 528, time: "15 hours" },
