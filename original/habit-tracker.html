@@ -1,0 +1,136 @@
+<head>
+  <link
+    href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+  <script src="https://unpkg.com/vue@next"></script>
+  <link href="../common.css" rel="stylesheet" />
+  <title>Design</title>
+  <link
+    href="../public/favicon-96.png"
+    rel="icon"
+    type="image/png"
+    sizes="96x96"
+  />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;1,200&display=swap");
+
+    table {
+      font-family: "Fraunces", serif;
+      /* font-size: 125%; */
+      white-space: nowrap;
+      margin: 0;
+      border: none;
+      border-collapse: separate;
+      border-spacing: 0;
+      table-layout: fixed;
+      border: 1px solid black;
+    }
+    table td,
+    table th {
+      border: 1px solid black;
+      padding: 0.5rem 1rem;
+    }
+    table thead th {
+      padding: 3px;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      width: 25vw;
+      background: white;
+    }
+    table td {
+      background: #fff;
+      padding: 4px 5px;
+      text-align: center;
+    }
+
+    table tbody th {
+      font-weight: 100;
+      font-style: italic;
+      text-align: left;
+      position: relative;
+    }
+    table thead th:first-child {
+      position: sticky;
+      left: 0;
+      z-index: 2;
+    }
+    table tbody th {
+      position: sticky;
+      left: 0;
+      background: white;
+      z-index: 1;
+    }
+    th,
+    td {
+      min-width: 40px;
+    }
+    .wide {
+      width: 300px;
+    }
+  </style>
+</head>
+
+<body id="app">
+  <div class="demo h-full">
+    <div class="border overflow-x-scroll">
+      <table class="table-fixed overflow-x-scroll">
+        <thead>
+          <tr>
+            <th class="text-xl sticky left-0 z-10 bg-white">
+              <div class="wide">Habits</div>
+            </th>
+            <th v-for="d in days" class="text-xl">{{d}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="h in habits">
+            <td class="border sticky left-0">
+              <input
+                class="w-full p-3 outline-none focus:bg-gray-100"
+                v-model="h.name"
+              />
+            </td>
+            <td class="border" v-for="d in days">
+              <input class="w-16 p-3 outline-none focus:bg-gray-100" />
+            </td>
+          </tr>
+          <tr>
+            <td class="border sticky left-0">
+              <input
+                class="w-full p-3 outline-none focus:bg-gray-100"
+                :placeholder="newHabit.placeholder"
+                v-model="newHabit.name"
+              />
+            </td>
+            <td class="border" v-for="d in days">
+              <input class="w-16 p-3 outline-none focus:bg-gray-100" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+
+<script>
+  const App = {
+    data() {
+      return {
+        newHabit: { placeholder: "Make a new habit", name: "" },
+        months: "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split(" "),
+        habits: [
+          {
+            name: "Write a sentence after dinner",
+            streak: [1, 2, 3, 4, 5, 6],
+          },
+          { name: "Exercise", streak: [1, 2, 3, 4, 5, 6] },
+          { name: "Reading a book", streak: [1, 2, 3, 4, 5, 6, 9, 10, 11] },
+        ],
+        days: [...Array(31).keys()].map((x) => x + 1),
+      };
+    },
+  };
+  Vue.createApp(App).mount("#app");
+</script>
