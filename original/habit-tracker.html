@@ -74,8 +74,8 @@
 
 <body id="app">
   <div class="demo h-full">
-    <div class="border overflow-x-scroll">
-      <table class="table-fixed overflow-x-scroll">
+    <div class="w-2/3 h-4/5 overflow-x-scroll overflow-y-scroll">
+      <table class="table-fixed overflow-x-scroll overflow-y-scroll">
         <thead>
           <tr>
             <th class="text-xl sticky left-0 z-10 bg-white">
@@ -98,11 +98,21 @@
           </tr>
           <tr>
             <td class="border sticky left-0">
-              <input
-                class="w-full p-3 outline-none focus:bg-gray-100"
-                :placeholder="newHabit.placeholder"
-                v-model="newHabit.name"
-              />
+              <form @submit.prevent="make" class="mb-0">
+                <input
+                  class="w-full p-3 outline-none focus:bg-gray-100"
+                  :placeholder="newHabit.placeholder"
+                  v-model="newHabit.name"
+                />
+              </form>
+            </td>
+            <td class="border" v-for="d in days">
+              <input class="w-16 p-3 outline-none focus:bg-gray-100" />
+            </td>
+          </tr>
+          <tr v-for="h in Array(0)">
+            <td class="border sticky left-0">
+              <input class="w-full p-3 outline-none focus:bg-gray-100" />
             </td>
             <td class="border" v-for="d in days">
               <input class="w-16 p-3 outline-none focus:bg-gray-100" />
@@ -120,6 +130,7 @@
       return {
         newHabit: { placeholder: "Make a new habit", name: "" },
         months: "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split(" "),
+        extraRows: 10,
         habits: [
           {
             name: "Write a sentence after dinner",
@@ -130,6 +141,13 @@
         ],
         days: [...Array(31).keys()].map((x) => x + 1),
       };
+    },
+    methods: {
+      make: function (e) {
+        const { name } = this.newHabit;
+        this.habits.push({ name, streak: [] });
+        this.newHabit.name = "";
+      },
     },
   };
   Vue.createApp(App).mount("#app");
