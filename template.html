@@ -14,4 +14,17 @@
   />
 </head>
 
-<div class="demo h-full">hi</div>
+<body id="app">
+  <div class="demo h-full">{{msg}}</div>
+</body>
+
+<script>
+  const App = {
+    data() {
+      return {
+        msg: "hi",
+      };
+    },
+  };
+  Vue.createApp(App).mount("#app");
+</script>
