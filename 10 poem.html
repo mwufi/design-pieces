@@ -14,7 +14,7 @@
   />
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap");
-    @import url("https://fonts.googleapis.com/css2?family=Benne&family=Martel+Sans:wght@200&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Benne&family=Baskervville&family=Martel+Sans:wght@200&display=swap");
 
     .font {
       font-family: "Cormorant Garamond", serif;
@@ -28,6 +28,7 @@
 
     .title {
       font-family: "Martel Sans", sans-serif;
+      margin-left: -1em;
     }
     .space {
       background: pink;
@@ -41,11 +42,25 @@
     <div class="flex justify-center items-center min-h-full">
       <div class="flex-col my-32">
         <div
-          class="text-2xl mb-8 font-extralight tracking-wide uppercase title"
+          class="
+            text-2xl
+            mb-8
+            font-extralight
+            tracking-wide
+            uppercase
+            title
+            focus:outline-none
+          "
+          contenteditable="true"
         >
           {{p.title}}
         </div>
-        <pre class="leading-tight font1 ml-6">{{p.content}}</pre>
+        <pre
+          class="leading-tight font1 focus:outline-none"
+          contenteditable="true"
+        >
+{{p.content}}</pre
+        >
       </div>
     </div>
     <div class="space"></div>
@@ -160,7 +175,9 @@ full of wolves or a man called
 Wulf, and though she has known 
 hunger, it is not hunger that carves 
 her belly with dread but longing
-for a man, or child, or wolf... (not finished)`,
+for a man, or child, or wolf... 
+
+   (to be continued. An excerpt from the Unstill Ones)`,
           },
         ],
       };
