@@ -1,0 +1,170 @@
+<head>
+  <link
+    href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+  <script src="https://unpkg.com/vue@next"></script>
+  <link href="/common.css" rel="stylesheet" />
+  <title>Design</title>
+  <link
+    href="/public/favicon-96.png"
+    rel="icon"
+    type="image/png"
+    sizes="96x96"
+  />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Benne&family=Martel+Sans:wght@200&display=swap");
+
+    .font {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 120%;
+    }
+
+    .font1 {
+      font-family: "Benne", serif;
+      font-size: 120%;
+    }
+
+    .title {
+      font-family: "Martel Sans", sans-serif;
+    }
+    .space {
+      background: pink;
+      height: 50%;
+    }
+  </style>
+</head>
+
+<body id="app">
+  <div v-for="p in poems">
+    <div class="flex justify-center items-center min-h-full">
+      <div class="flex-col my-32">
+        <div
+          class="text-2xl mb-8 font-extralight tracking-wide uppercase title"
+        >
+          {{p.title}}
+        </div>
+        <pre class="leading-tight font1 ml-6">{{p.content}}</pre>
+      </div>
+    </div>
+    <div class="space"></div>
+  </div>
+</body>
+
+<script>
+  const App = {
+    data() {
+      return {
+        poems: [
+          {
+            title: "Tabula Rasa",
+            content: `
+One day it rained. One day a green 
+inchworm crawled along his hand.
+One night they held his head as he drank 
+sharp-root wine from the fossilized cup. 
+His mother, grandmother, and her older 
+sister, knuckles bulky as oak-burls.
+His mother, who was called the proud
+in reverence or scorn. He lay on the table 
+used for nothing except this. This: had
+no name, though naming happened here.`,
+          },
+          {
+            title: "The smokewood tree",
+            content: `
+The smokewood tree dropped its leaves 
+in our hands and we sewed them
+into living cups. We drank until
+the leaves weathered, went shattery 
+against our lips. We used our lips
+for many things, talking, singing, 
+lovemaking, except in the silent 
+season, which was for harvest 
+and contemplation when we 
+forbid ourselves speech
+and sealed ourselves
+tight as the blue smokewood bark 
+which holds to its trunk
+with a layer of sap. In that sap
+the night-flies hatch, and we let
+our thoughts do the same, but
+as for me, the silent season
+is hard. It is blue out,
+the blue is full of chattering
+branches, their voices
+covered not in moss, but
+frost. Frost. Like a fur hood
+I can’t fling back against my shoulders.`,
+          },
+          {
+            title: "Wulf and eadwacer",
+            content: `
+The poem is either about a woman 
+separated from a man by a petty 
+tribal war, or about a woman 
+forced to live with a second man 
+because of a petty tribal war. 
+Either way, she bears a child. 
+Either way, one man is kept 
+prisoner on an island, guarded
+by bloodthirsty swords. Either 
+way, the woman sits crying
+in the rain, sheltered by trees, 
+or it could be the rain is crying, 
+or it could be there is no rain, 
+she’s only using it as an image.
+
+The second man, who is not
+the island prisoner, whose name 
+means possession- watcher,
+comes to the woman to protect 
+her, or imprison her, or because
+he wants a woman just then,
+and so fucks her. This feels good 
+to her because she’s lonely, or
+likes a good fuck sometimes,
+or because she loves this second 
+man, not the first. But afterwards 
+it sickens her, out of loyalty
+to the imprisoned man, or because 
+the second man seemed pleasing 
+at first, but then less so.
+
+The child is sent to the woods 
+to die or kill or escape with the 
+island man, who may have got 
+free of the bloodthirsty men
+or stuck them with their own 
+swords. Then there is either
+an eagle or a cruelty, or cruelty
+to the woman has always seemed 
+inseparable from eagles, or the 
+one who copied her poem 
+suffered from partial blindness 
+and wrote the wrong word 
+entirely. Certainly sharp-edged 
+things, carnage, slaughter. Or
+the island was only an image,
+and there was never an island,
+she only meant we seemed so 
+distant from each other we might 
+as well be on two islands separated 
+by a hard salted sea, and neither 
+of us ship builders. In this case 
+there were no islands, men, or
+swords, but instead a hopeless
+separateness ending in a wood
+full of wolves or a man called
+Wulf, and though she has known 
+hunger, it is not hunger that carves 
+her belly with dread but longing
+for a man, or child, or wolf... (not finished)`,
+          },
+        ],
+      };
+    },
+  };
+  Vue.createApp(App).mount("#app");
+</script>
