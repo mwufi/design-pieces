@@ -38,13 +38,30 @@
 </head>
 
 <body id="app">
-  <div v-for="p in poems">
+  <div v-for="p in poems" class="relative">
+    <!-- <button
+      class="
+        absolute
+        demo
+        top-4
+        right-10
+        rounded-full
+        bg-pink-200
+        text-white
+        p-2
+        px-4
+        shadow-sm
+        hover:shadow-lg
+      "
+    >
+      Save
+    </button> -->
     <div class="flex justify-center items-center min-h-full">
       <div class="flex-col my-32">
         <div
           class="
             text-2xl
-            mb-8
+            mb-12
             font-extralight
             tracking-wide
             uppercase
@@ -56,10 +73,16 @@
           {{p.title}}
         </div>
         <pre
-          class="leading-tight font1 focus:outline-none max-w-lg whitespace-pre-wrap"
+          class="
+            leading-tight
+            font1
+            focus:outline-none
+            max-w-lg
+            whitespace-pre-wrap
+          "
           contenteditable="true"
         >
-{{p.content}}</pre
+{{p.content.trim()}}</pre
         >
       </div>
     </div>
