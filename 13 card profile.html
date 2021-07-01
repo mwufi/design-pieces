@@ -1,0 +1,105 @@
+<head>
+  <link
+    href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+  <script src="https://unpkg.com/vue@next"></script>
+  <link href="/common.css" rel="stylesheet" />
+  <title>Design</title>
+  <link
+    href="/public/favicon-96.png"
+    rel="icon"
+    type="image/png"
+    sizes="96x96"
+  />
+  <style>
+    .feed {
+      padding-left: 24px;
+    }
+    .card {
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+      margin-bottom: 1.4em;
+    }
+    .card > * {
+      margin-bottom: 0.7em;
+    }
+  </style>
+</head>
+
+<body id="app">
+  
+  <div class="flex justify-center sticky top-0 w-full bg-white border-b-4 border-gray-50 mb-4">
+      <ul class="flex justify-start max-w-5xl p-4 w-full">
+        <li class="mr-6" ><a class="text-lg font-bold text-yellow-400 border-b-4 border-yellow-400 py-4">Selected</a></li>
+        <li class="mr-6" v-for="i in menu"><a class="text-lg font-bold text-gray-500">{{i}}</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="min-h-full flex items-stretch justify-center">
+    <div class="sidebar">
+      <div class="">
+        <div class="card rounded-xl p-4 max-w-lg">
+          <div class="font-bold">Latest Posts</div>
+          <div class="flex flex-col" v-for="p in posts">
+            <div>{{p.title}}</div>
+            <div class="text-sm text-gray-400">Jan 12</div>
+          </div>
+        </div>
+        <div v-for="a in foo" class="card rounded-xl p-4 max-w-lg">
+          <div class="font-bold">Win my 43k bike and support WCCC charity!</div>
+          <div class="rounded-full w-full h-2 bg-green-400"></div>
+          <div class="font-bold">47% of goal</div>
+          <p class="">
+            I am crowdfunding to give away my bike instad of selling it!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="feed">
+      <pre class="card rounded-xl p-4 max-w-lg font-sans whitespace-pre-wrap">
+{{msg}}
+</pre
+      >
+      <pre class="card rounded-xl p-4 max-w-lg font-sans whitespace-pre-wrap">
+  {{msg}}</pre
+      >
+      <pre class="card rounded-xl p-4 max-w-lg font-sans whitespace-pre-wrap">
+    {{msg}}</pre
+      >
+      <pre class="card rounded-xl p-4 max-w-lg font-sans whitespace-pre-wrap">
+    {{msg}}</pre
+      >
+      <pre class="card rounded-xl p-4 max-w-lg font-sans whitespace-pre-wrap">
+    {{msg}}</pre
+      >
+      <pre class="card rounded-xl p-4 max-w-lg font-sans whitespace-pre-wrap">
+    {{msg}}</pre
+      >
+    </div>
+  </div>
+</body>
+
+<script>
+  const App = {
+    data() {
+      return {
+        menu: [
+          'About', 'Gallery', 'Posts', 'Shop'
+        ],
+        posts: [{ title: "paint with viv uncut" }],
+        foo: [1, 2, 1, 1, 1, 1],
+        msg: `
+✦ Welcome to my Ko-fi page ✦
+
+Follow along for some //behind the painting// rambles and other goodies!
+
+Always grateful for your love and support 💕
+
+- viv
+`,
+      };
+    },
+  };
+  Vue.createApp(App).mount("#app");
+</script>
