@@ -1,39 +1,35 @@
 <head>
-  <link
-    href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-    rel="stylesheet"
-  />
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <script src="https://unpkg.com/vue@next"></script>
   <link href="/common.css" rel="stylesheet" />
   <title>Design</title>
-  <link
-    href="/public/favicon-96.png"
-    rel="icon"
-    type="image/png"
-    sizes="96x96"
-  />
+  <link href="/public/favicon-96.png" rel="icon" type="image/png" sizes="96x96" />
   <style>
     .feed {
       padding-left: 24px;
     }
+
     .card {
       box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
       margin-bottom: 1.4em;
     }
-    .card > * {
+
+    .card>* {
       margin-bottom: 0.7em;
     }
   </style>
 </head>
 
 <body id="app">
-  
+
   <div class="flex justify-center sticky top-0 w-full bg-white border-b-4 border-gray-50 mb-4">
-      <ul class="flex justify-start max-w-5xl p-4 w-full">
-        <li class="mr-6" ><a class="text-lg font-bold text-yellow-400 border-b-4 border-yellow-400 py-4">Selected</a></li>
-        <li class="mr-6" v-for="i in menu"><a class="text-lg font-bold text-gray-500">{{i}}</a></li>
-      </ul>
-    </div>
+    <ul class="flex justify-start max-w-5xl p-4 w-full">
+      <li class="mr-6"><a class="text-lg font-bold text-yellow-400 border-b-4 border-yellow-400 py-4">Selected</a></li>
+      <li class="mr-6" v-for="i in menu"><a class="text-lg font-bold text-gray-500">{{i}}</a></li>
+    </ul>
+  </div>
   </div>
   <div class="min-h-full flex items-stretch justify-center">
     <div class="sidebar">
@@ -59,23 +55,17 @@
     <div class="feed">
       <pre class="card rounded-xl p-4 max-w-lg font-sans whitespace-pre-wrap">
 {{msg}}
-</pre
-      >
+</pre>
       <pre class="card rounded-xl p-4 max-w-lg font-sans whitespace-pre-wrap">
-  {{msg}}</pre
-      >
+  {{msg}}</pre>
       <pre class="card rounded-xl p-4 max-w-lg font-sans whitespace-pre-wrap">
-    {{msg}}</pre
-      >
+    {{msg}}</pre>
       <pre class="card rounded-xl p-4 max-w-lg font-sans whitespace-pre-wrap">
-    {{msg}}</pre
-      >
+    {{msg}}</pre>
       <pre class="card rounded-xl p-4 max-w-lg font-sans whitespace-pre-wrap">
-    {{msg}}</pre
-      >
+    {{msg}}</pre>
       <pre class="card rounded-xl p-4 max-w-lg font-sans whitespace-pre-wrap">
-    {{msg}}</pre
-      >
+    {{msg}}</pre>
     </div>
   </div>
 </body>

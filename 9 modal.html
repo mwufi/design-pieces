@@ -1,25 +1,21 @@
 <head>
-  <link
-    href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-    rel="stylesheet"
-  />
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <script src="https://unpkg.com/vue@next"></script>
   <link href="/common.css" rel="stylesheet" />
   <title>Design</title>
-  <link
-    href="/public/favicon-96.png"
-    rel="icon"
-    type="image/png"
-    sizes="96x96"
-  />
+  <link href="/public/favicon-96.png" rel="icon" type="image/png" sizes="96x96" />
   <style>
     button {
       max-width: 300px;
     }
+
     .modal {
       /* width: 1000px; */
       height: 500px;
     }
+
     .colorCell {
       width: 100px;
       height: 100px;
@@ -31,9 +27,7 @@
 
 <body id="app">
   <div class="demo h-full">
-    <div
-      class="absolute top-0 left-0 w-full h-full bg-gray-700 opacity-50"
-    ></div>
+    <div class="absolute top-0 left-0 w-full h-full bg-gray-700 opacity-50"></div>
     <div class="rounded-xl p-10 modal bg-white z-10 overflow-hidden max-w-4xl m-2">
       <div class="lg:grid lg:grid-cols-2 gap-3">
         <div class="lg:col-start-2 lg:row-start-1 flex flex-col max-w-sm">
@@ -50,16 +44,14 @@
           </button>
         </div>
 
-        <div
-          class="
+        <div class="
             hidden
             lg:block
             lg:col-start-1
             lg:row-start-1
             overflow-hidden
             p-8
-          "
-        >
+          ">
           <img class="rounded-xl" src="public/mountain.jpeg" />
           <div class="colorCell color1"></div>
         </div>

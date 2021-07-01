@@ -1,17 +1,11 @@
 <head>
-  <link
-    href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-    rel="stylesheet"
-  />
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <script src="https://unpkg.com/vue@next"></script>
   <link href="/common.css" rel="stylesheet" />
   <title>Design</title>
-  <link
-    href="/public/favicon-96.png"
-    rel="icon"
-    type="image/png"
-    sizes="96x96"
-  />
+  <link href="/public/favicon-96.png" rel="icon" type="image/png" sizes="96x96" />
   <style>
     .spacer {
       height: 1;
@@ -25,8 +19,7 @@
   <div class="demo h-full bg-gray-100">
     <div class="container shadow-lg rounded-xl max-w-md bg-white">
       <div class="item border-b">
-        <div
-          class="
+        <div class="
             flex
             items-center
             hover:bg-red-400
@@ -34,14 +27,9 @@
             hover:text-white
             my-2
             p-3
-          "
-        >
+          ">
           <div class="h-12 w-12 ml-12">
-            <img
-              src="https://source.unsplash.com/random/48x48"
-              alt=""
-              class="rounded-full"
-            />
+            <img src="https://source.unsplash.com/random/48x48" alt="" class="rounded-full" />
           </div>
           <div class="ml-4">
             <pre class="text-sm mb-1">Best Zen</pre>
@@ -50,11 +38,11 @@
         </div>
       </div>
       <div v-for="t in items">
-        <div
-          class="flex hover:bg-red-400 text-gray-500 hover:text-white p-2 my-2"
-        >
+        <div class="flex hover:bg-red-400 text-gray-500 hover:text-white p-2 my-2">
           <div class="ml-16 py-1 flex">
-            <span class="text-sm sans-serif"><pre>+   </pre></span>
+            <span class="text-sm sans-serif">
+              <pre>+   </pre>
+            </span>
             <pre class="text-sm sans-serif">{{t.text}}</pre>
           </div>
         </div>

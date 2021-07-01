@@ -1,39 +1,38 @@
 <head>
-  <link
-    href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-    rel="stylesheet"
-  />
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Design</title>
-  <link
-    href="/public/favicon-96.png"
-    rel="icon"
-    type="image/png"
-    sizes="96x96"
-  />
+  <link href="/public/favicon-96.png" rel="icon" type="image/png" sizes="96x96" />
   <script src="https://unpkg.com/vue@next"></script>
   <link href="/common.css" rel="stylesheet" />
   <style>
-    tr + * {
+    tr+* {
       margin-top: 10px;
     }
+
     table {
       width: 100%;
       border-collapse: separate;
       border-spacing: 0 0.5em;
     }
+
     .n {
       width: 100%;
       max-width: 1024px;
     }
+
     th {
       padding-left: 1em;
       padding-right: 1em;
     }
-    tbody > tr {
+
+    tbody>tr {
       box-shadow: 0 0 2px 0 #ddd;
       transition: all 0.2s ease-in-out 0s;
     }
-    tbody > tr:hover {
+
+    tbody>tr:hover {
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
       transform: scaleX(0.99);
     }
@@ -51,19 +50,9 @@
             <button class="font-bold flex text-gray-400">
               <div>Dai Available</div>
               <div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M19 9l-7 7-7-7"
-                  />
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
               </div>
             </button>

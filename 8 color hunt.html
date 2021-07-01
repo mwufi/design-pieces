@@ -1,21 +1,16 @@
 <head>
-  <link
-    href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-    rel="stylesheet"
-  />
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <script src="https://unpkg.com/vue@next"></script>
   <link href="/common.css" rel="stylesheet" />
   <title>Design</title>
-  <link
-    href="/public/favicon-96.png"
-    rel="icon"
-    type="image/png"
-    sizes="96x96"
-  />
+  <link href="/public/favicon-96.png" rel="icon" type="image/png" sizes="96x96" />
   <style>
     .sidebar {
       min-width: 170px;
     }
+
     .fixed-sidebar {
       margin-top: 100px;
       padding-top: 4em;
@@ -25,13 +20,12 @@
       top: 0;
       height: calc(100vh - 60px);
     }
+
     .line {
-      background-image: linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 0) 0%,
-        #000000 50%,
-        rgba(0, 0, 0, 0) 100%
-      );
+      background-image: linear-gradient(90deg,
+          rgba(0, 0, 0, 0) 0%,
+          #000000 50%,
+          rgba(0, 0, 0, 0) 100%);
       height: 1px;
     }
 
@@ -39,21 +33,26 @@
       height: 240px;
       width: 100%;
     }
+
     .like-button {
       min-width: 5em;
     }
+
     .grid {
       grid-column-gap: 4%;
       grid-row-gap: 1.5em;
     }
+
     .header {
       position: fixed;
       top: 0;
       width: 100%;
     }
+
     .s {
       min-width: 170px;
     }
+
     .main-grid {
       grid-template-columns: 170px 1fr 170px;
     }
@@ -63,8 +62,7 @@
 <body id="app">
   <div class="grid main-grid min-h-full w-full">
     <!-- header -->
-    <div
-      class="
+    <div class="
         grid
         main-grid
         items-center
@@ -74,13 +72,9 @@
         opacity-80
         p-2
         px-8
-      "
-    >
+      ">
       <div class="text-lg s">{{title}}</div>
-      <input
-        type="text"
-        :placeholder="searchText"
-        class="
+      <input type="text" :placeholder="searchText" class="
           p-3
           px-4
           rounded-full
@@ -89,33 +83,23 @@
           text
           w-full
           text-gray-700
-        "
-      />
+        " />
       <button class="right">...</button>
     </div>
     <!-- sidebar -->
     <div class="flex flex-col fixed-sidebar text-gray-600 p-4 py-6">
-      <div
-        class="rounded-md hover:bg-gray-50 py-2 pl-4 text-lg w-full"
-        v-for="c in topCategories"
-      >
+      <div class="rounded-md hover:bg-gray-50 py-2 pl-4 text-lg w-full" v-for="c in topCategories">
         {{c}}
       </div>
       <div class="line opacity-10 my-2"></div>
       <div class="font-light">
-        <div
-          class="rounded-full hover:bg-gray-50 py-1 px-4 my-0.5 text-sm w-full"
-          v-for="c in categories"
-        >
+        <div class="rounded-full hover:bg-gray-50 py-1 px-4 my-0.5 text-sm w-full" v-for="c in categories">
           {{c}}
         </div>
       </div>
     </div>
     <!-- <div id="placeholder for left column"></div> -->
-    <div
-      class="grid w-4/5 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 w-full"
-      style="margin: 5em 0"
-    >
+    <div class="grid w-4/5 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 w-full" style="margin: 5em 0">
       <div class="item" v-for="item in items">
         <div class="palette rounded-xl bg-gray-200 mb-3"></div>
         <div class="flex justify-between items-center">
@@ -132,18 +116,12 @@
   <div class="demo border h-full">
     <div class="text-6xl mr-12   text-gray-700 text-right">Menu</div>
     <div class="flex flex-col sidebar text-gray-600">
-      <div
-        class="rounded-md hover:bg-gray-100 py-2 px-4 m-1 text-xl w-full"
-        v-for="c in topCategories"
-      >
+      <div class="rounded-md hover:bg-gray-100 py-2 px-4 m-1 text-xl w-full" v-for="c in topCategories">
         {{c}}
       </div>
     </div>
     <div class="flex flex-col sidebar text-gray-500 font-light">
-      <div
-        class="rounded-full hover:bg-gray-50 py-1 px-4 m-0.5 text-sm w-full"
-        v-for="c in categories"
-      >
+      <div class="rounded-full hover:bg-gray-50 py-1 px-4 m-0.5 text-sm w-full" v-for="c in categories">
         {{c}}
       </div>
     </div>

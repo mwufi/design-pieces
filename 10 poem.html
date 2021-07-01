@@ -1,17 +1,11 @@
 <head>
-  <link
-    href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-    rel="stylesheet"
-  />
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <script src="https://unpkg.com/vue@next"></script>
   <link href="/common.css" rel="stylesheet" />
   <title>Design</title>
-  <link
-    href="/public/favicon-96.png"
-    rel="icon"
-    type="image/png"
-    sizes="96x96"
-  />
+  <link href="/public/favicon-96.png" rel="icon" type="image/png" sizes="96x96" />
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap");
     @import url("https://fonts.googleapis.com/css2?family=Benne&family=Baskervville&family=Martel+Sans:wght@200&display=swap");
@@ -30,6 +24,7 @@
       font-family: "Martel Sans", sans-serif;
       margin-left: -1em;
     }
+
     .space {
       background: pink;
       height: 50%;
@@ -58,8 +53,7 @@
     </button> -->
     <div class="flex justify-center items-center min-h-full">
       <div class="flex-col my-32">
-        <div
-          class="
+        <div class="
             text-2xl
             mb-12
             font-extralight
@@ -67,23 +61,17 @@
             uppercase
             title
             focus:outline-none
-          "
-          contenteditable="true"
-        >
+          " contenteditable="true">
           {{p.title}}
         </div>
-        <pre
-          class="
+        <pre class="
             leading-tight
             font1
             focus:outline-none
             max-w-lg
             whitespace-pre-wrap
-          "
-          contenteditable="true"
-        >
-{{p.content.trim()}}</pre
-        >
+          " contenteditable="true">
+{{p.content.trim()}}</pre>
       </div>
     </div>
     <div class="space"></div>

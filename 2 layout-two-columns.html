@@ -1,24 +1,23 @@
 <head>
-  <link
-    href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-    rel="stylesheet"
-  />
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <script src="https://unpkg.com/vue@next"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
+    rel="stylesheet" />
 
   <style>
     .light-blue {
-      color: rgb(108,163,181)
+      color: rgb(108, 163, 181)
     }
+
     .dark-blue {
-      color: rgb(47,91,105)
+      color: rgb(47, 91, 105)
     }
+
     .blue {
-      color: rgb(56,116,135)
+      color: rgb(56, 116, 135)
     }
 
 
@@ -27,6 +26,7 @@
       justify-content: center;
       align-items: center;
     }
+
     .panel {
       border-top: 4px solid #ddd;
       width: 100%;
@@ -34,9 +34,11 @@
       font-weight: 300;
       -webkit-font-smoothing: antialiased;
     }
+
     .panel-header {
       border-bottom: 1px solid #ddd;
     }
+
     .panel-content {
       border-bottom: 1px solid #ddd;
     }
@@ -46,9 +48,11 @@
       padding: 1em;
       font-size: 2em;
     }
+
     .subtitle {
       font-size: x-large;
     }
+
     body {
       overscroll-behavior-y: none;
     }
@@ -68,8 +72,9 @@
             Level Prices
           </div>
           <div class="panel-content text-sm flex flex-col">
-            <div class="m-3 p-3 border border-blue-500 text-xl font-medium">View and download this data back to 2014. <a class="text-blue-500" href="#">Upgrade now.</a></div>
-         
+            <div class="m-3 p-3 border border-blue-500 text-xl font-medium">View and download this data back to 2014. <a
+                class="text-blue-500" href="#">Upgrade now.</a></div>
+
           </div>
         </div>
 
@@ -79,43 +84,44 @@
             Historical Prices
           </div>
           <div class="panel-content text-sm flex flex-col">
-            <div class="m-3 p-3 border border-blue-500 text-xl font-medium">View and download this data back to 2014. <a class="text-blue-500" href="#">Upgrade now.</a></div>
-           <div class="flex">
-            <div class="px-4">
-              <table class="table-fixed w-full my-2">
-                <thead class="border-b text-sm">
-                  <tr>
-                    <th class="text-left">Date</th>
-                    <th class="text-right">Value</th>
-                  </tr>
-                </thead>
-                </thead>
-                <tbody>
-                  <tr v-for="item in historicalPrices.left" class="border-b">
-                    <td class="w-1/2 p-1 text-sm pl-0">{{item.date}}</td>
-                    <td class="text-right w-1/2 p-1 text-sm">{{item.amount}}</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div class="m-3 p-3 border border-blue-500 text-xl font-medium">View and download this data back to 2014. <a
+                class="text-blue-500" href="#">Upgrade now.</a></div>
+            <div class="flex">
+              <div class="px-4">
+                <table class="table-fixed w-full my-2">
+                  <thead class="border-b text-sm">
+                    <tr>
+                      <th class="text-left">Date</th>
+                      <th class="text-right">Value</th>
+                    </tr>
+                  </thead>
+                  </thead>
+                  <tbody>
+                    <tr v-for="item in historicalPrices.left" class="border-b">
+                      <td class="w-1/2 p-1 text-sm pl-0">{{item.date}}</td>
+                      <td class="text-right w-1/2 p-1 text-sm">{{item.amount}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="px-4">
+                <table class="table-fixed w-full my-2">
+                  <thead class="border-b text-sm">
+                    <tr>
+                      <th class="text-left">Date</th>
+                      <th class="text-right">Value</th>
+                    </tr>
+                  </thead>
+                  </thead>
+                  <tbody>
+                    <tr v-for="item in historicalPrices.right" class="border-b">
+                      <td class="w-1/2 p-1 text-sm pl-0">{{item.date}}</td>
+                      <td class="text-right w-1/2 p-1 text-sm">{{item.amount}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-            <div class="px-4">
-              <table class="table-fixed w-full my-2">
-                <thead class="border-b text-sm">
-                  <tr>
-                    <th class="text-left">Date</th>
-                    <th class="text-right">Value</th>
-                  </tr>
-                </thead>
-                </thead>
-                <tbody>
-                  <tr v-for="item in historicalPrices.right" class="border-b">
-                    <td class="w-1/2 p-1 text-sm pl-0">{{item.date}}</td>
-                    <td class="text-right w-1/2 p-1 text-sm">{{item.amount}}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-           </div>
           </div>
         </div>
 

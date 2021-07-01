@@ -1,8 +1,7 @@
 <head>
-  <link
-    href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-    rel="stylesheet"
-  />
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     .demo {
       display: flex;
@@ -15,12 +14,15 @@
     .item {
       display: flex;
     }
+
     .icon {
       width: 60px;
     }
+
     .icon-border {
       border: 2px solid #ddd;
     }
+
     .content {
       width: 100%;
       display: flex;
@@ -33,6 +35,7 @@
       padding: 1em;
       font-size: 2em;
     }
+
     .container {
       width: 600px;
     }
@@ -40,6 +43,7 @@
     .search-form {
       display: flex;
     }
+
     body {
       overscroll-behavior-y: none;
     }
@@ -52,19 +56,9 @@
     <div class="container pb-3 shadow-md rounded-xl">
       <div class="search-form border-b-2 border-gray-900 p-3 m-3">
         <div class="search-icon">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
         </div>
         <input class="ml-4 w-full focus:outline-none" placeholder="Where to?" />
@@ -72,18 +66,13 @@
 
       <div class="item bg-gray-100 p-4">
         <div class="icon flex justify-center content-center">
-          <svg
-            viewBox="0 0 24 24"
-            width="40px"
-            height="40px"
-            class="border rounded-full p-1 icon-border"
-          >
+          <svg viewBox="0 0 24 24" width="40px" height="40px" class="border rounded-full p-1 icon-border">
             <path
-              d="M12 2C7.745 2 4.27 5.475 4.27 9.73c0 4.539 4.538 9.056 6.97 11.487L12 22l.759-.761c2.432-2.453 6.971-6.97 6.971-11.509C19.73 5.475 16.256 2 12 2zm.008 17.156C9.72 16.843 6.271 13.102 6.271 9.73A5.736 5.736 0 0112 4c3.16 0 5.73 2.571 5.73 5.73 0 3.359-3.455 7.117-5.722 9.426z"
-            ></path>
+              d="M12 2C7.745 2 4.27 5.475 4.27 9.73c0 4.539 4.538 9.056 6.97 11.487L12 22l.759-.761c2.432-2.453 6.971-6.97 6.971-11.509C19.73 5.475 16.256 2 12 2zm.008 17.156C9.72 16.843 6.271 13.102 6.271 9.73A5.736 5.736 0 0112 4c3.16 0 5.73 2.571 5.73 5.73 0 3.359-3.455 7.117-5.722 9.426z">
+            </path>
             <path
-              d="M12 5.987c-1.93 0-3.5 1.57-3.5 3.5s1.57 3.5 3.5 3.5 3.5-1.57 3.5-3.5-1.57-3.5-3.5-3.5zm0 5c-.827 0-1.5-.673-1.5-1.5s.673-1.5 1.5-1.5 1.5.673 1.5 1.5-.673 1.5-1.5 1.5z"
-            ></path>
+              d="M12 5.987c-1.93 0-3.5 1.57-3.5 3.5s1.57 3.5 3.5 3.5 3.5-1.57 3.5-3.5-1.57-3.5-3.5-3.5zm0 5c-.827 0-1.5-.673-1.5-1.5s.673-1.5 1.5-1.5 1.5.673 1.5 1.5-.673 1.5-1.5 1.5z">
+            </path>
           </svg>
         </div>
         <div class="content ml-2">
@@ -98,18 +87,13 @@
       <!-- menu has multiple items -->
       <div class="item hover:bg-gray-100 p-4">
         <div class="icon flex justify-center content-center">
-          <svg
-            viewBox="0 0 24 24"
-            width="40px"
-            height="40px"
-            class="border rounded-full p-1 icon-border"
-          >
+          <svg viewBox="0 0 24 24" width="40px" height="40px" class="border rounded-full p-1 icon-border">
             <path
-              d="M12 2C7.745 2 4.27 5.475 4.27 9.73c0 4.539 4.538 9.056 6.97 11.487L12 22l.759-.761c2.432-2.453 6.971-6.97 6.971-11.509C19.73 5.475 16.256 2 12 2zm.008 17.156C9.72 16.843 6.271 13.102 6.271 9.73A5.736 5.736 0 0112 4c3.16 0 5.73 2.571 5.73 5.73 0 3.359-3.455 7.117-5.722 9.426z"
-            ></path>
+              d="M12 2C7.745 2 4.27 5.475 4.27 9.73c0 4.539 4.538 9.056 6.97 11.487L12 22l.759-.761c2.432-2.453 6.971-6.97 6.971-11.509C19.73 5.475 16.256 2 12 2zm.008 17.156C9.72 16.843 6.271 13.102 6.271 9.73A5.736 5.736 0 0112 4c3.16 0 5.73 2.571 5.73 5.73 0 3.359-3.455 7.117-5.722 9.426z">
+            </path>
             <path
-              d="M12 5.987c-1.93 0-3.5 1.57-3.5 3.5s1.57 3.5 3.5 3.5 3.5-1.57 3.5-3.5-1.57-3.5-3.5-3.5zm0 5c-.827 0-1.5-.673-1.5-1.5s.673-1.5 1.5-1.5 1.5.673 1.5 1.5-.673 1.5-1.5 1.5z"
-            ></path>
+              d="M12 5.987c-1.93 0-3.5 1.57-3.5 3.5s1.57 3.5 3.5 3.5 3.5-1.57 3.5-3.5-1.57-3.5-3.5-3.5zm0 5c-.827 0-1.5-.673-1.5-1.5s.673-1.5 1.5-1.5 1.5.673 1.5 1.5-.673 1.5-1.5 1.5z">
+            </path>
           </svg>
         </div>
         <div class="content ml-2">
@@ -121,18 +105,13 @@
       <!-- second item -->
       <div class="item hover:bg-gray-100 p-4">
         <div class="icon flex justify-center content-center">
-          <svg
-            viewBox="0 0 24 24"
-            width="40px"
-            height="40px"
-            class="border rounded-full p-1 icon-border"
-          >
+          <svg viewBox="0 0 24 24" width="40px" height="40px" class="border rounded-full p-1 icon-border">
             <path
-              d="M12 2C7.745 2 4.27 5.475 4.27 9.73c0 4.539 4.538 9.056 6.97 11.487L12 22l.759-.761c2.432-2.453 6.971-6.97 6.971-11.509C19.73 5.475 16.256 2 12 2zm.008 17.156C9.72 16.843 6.271 13.102 6.271 9.73A5.736 5.736 0 0112 4c3.16 0 5.73 2.571 5.73 5.73 0 3.359-3.455 7.117-5.722 9.426z"
-            ></path>
+              d="M12 2C7.745 2 4.27 5.475 4.27 9.73c0 4.539 4.538 9.056 6.97 11.487L12 22l.759-.761c2.432-2.453 6.971-6.97 6.971-11.509C19.73 5.475 16.256 2 12 2zm.008 17.156C9.72 16.843 6.271 13.102 6.271 9.73A5.736 5.736 0 0112 4c3.16 0 5.73 2.571 5.73 5.73 0 3.359-3.455 7.117-5.722 9.426z">
+            </path>
             <path
-              d="M12 5.987c-1.93 0-3.5 1.57-3.5 3.5s1.57 3.5 3.5 3.5 3.5-1.57 3.5-3.5-1.57-3.5-3.5-3.5zm0 5c-.827 0-1.5-.673-1.5-1.5s.673-1.5 1.5-1.5 1.5.673 1.5 1.5-.673 1.5-1.5 1.5z"
-            ></path>
+              d="M12 5.987c-1.93 0-3.5 1.57-3.5 3.5s1.57 3.5 3.5 3.5 3.5-1.57 3.5-3.5-1.57-3.5-3.5-3.5zm0 5c-.827 0-1.5-.673-1.5-1.5s.673-1.5 1.5-1.5 1.5.673 1.5 1.5-.673 1.5-1.5 1.5z">
+            </path>
           </svg>
         </div>
         <div class="content ml-2">
@@ -144,18 +123,13 @@
       <!-- third item -->
       <div class="item hover:bg-gray-100 p-4">
         <div class="icon flex justify-center content-center">
-          <svg
-            viewBox="0 0 24 24"
-            width="40px"
-            height="40px"
-            class="border rounded-full p-1 icon-border"
-          >
+          <svg viewBox="0 0 24 24" width="40px" height="40px" class="border rounded-full p-1 icon-border">
             <path
-              d="M12 2C7.745 2 4.27 5.475 4.27 9.73c0 4.539 4.538 9.056 6.97 11.487L12 22l.759-.761c2.432-2.453 6.971-6.97 6.971-11.509C19.73 5.475 16.256 2 12 2zm.008 17.156C9.72 16.843 6.271 13.102 6.271 9.73A5.736 5.736 0 0112 4c3.16 0 5.73 2.571 5.73 5.73 0 3.359-3.455 7.117-5.722 9.426z"
-            ></path>
+              d="M12 2C7.745 2 4.27 5.475 4.27 9.73c0 4.539 4.538 9.056 6.97 11.487L12 22l.759-.761c2.432-2.453 6.971-6.97 6.971-11.509C19.73 5.475 16.256 2 12 2zm.008 17.156C9.72 16.843 6.271 13.102 6.271 9.73A5.736 5.736 0 0112 4c3.16 0 5.73 2.571 5.73 5.73 0 3.359-3.455 7.117-5.722 9.426z">
+            </path>
             <path
-              d="M12 5.987c-1.93 0-3.5 1.57-3.5 3.5s1.57 3.5 3.5 3.5 3.5-1.57 3.5-3.5-1.57-3.5-3.5-3.5zm0 5c-.827 0-1.5-.673-1.5-1.5s.673-1.5 1.5-1.5 1.5.673 1.5 1.5-.673 1.5-1.5 1.5z"
-            ></path>
+              d="M12 5.987c-1.93 0-3.5 1.57-3.5 3.5s1.57 3.5 3.5 3.5 3.5-1.57 3.5-3.5-1.57-3.5-3.5-3.5zm0 5c-.827 0-1.5-.673-1.5-1.5s.673-1.5 1.5-1.5 1.5.673 1.5 1.5-.673 1.5-1.5 1.5z">
+            </path>
           </svg>
         </div>
         <div class="content ml-2">
@@ -173,19 +147,9 @@
     <div class="container pb-3 shadow-md rounded-xl">
       <div class="search-form border-b-2 border-gray-900 p-3 m-3">
         <div class="search-icon">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
         </div>
         <input class="ml-4 w-full focus:outline-none" placeholder="Where to?" />
@@ -201,18 +165,13 @@
     <div class="container pb-3 shadow-md rounded-xl">
       <div class="item hover:bg-gray-100 p-4">
         <div class="icon flex justify-center content-center">
-          <svg
-            viewBox="0 0 24 24"
-            width="40px"
-            height="40px"
-            class="border rounded-full p-1 icon-border"
-          >
+          <svg viewBox="0 0 24 24" width="40px" height="40px" class="border rounded-full p-1 icon-border">
             <path
-              d="M12 2C7.745 2 4.27 5.475 4.27 9.73c0 4.539 4.538 9.056 6.97 11.487L12 22l.759-.761c2.432-2.453 6.971-6.97 6.971-11.509C19.73 5.475 16.256 2 12 2zm.008 17.156C9.72 16.843 6.271 13.102 6.271 9.73A5.736 5.736 0 0112 4c3.16 0 5.73 2.571 5.73 5.73 0 3.359-3.455 7.117-5.722 9.426z"
-            ></path>
+              d="M12 2C7.745 2 4.27 5.475 4.27 9.73c0 4.539 4.538 9.056 6.97 11.487L12 22l.759-.761c2.432-2.453 6.971-6.97 6.971-11.509C19.73 5.475 16.256 2 12 2zm.008 17.156C9.72 16.843 6.271 13.102 6.271 9.73A5.736 5.736 0 0112 4c3.16 0 5.73 2.571 5.73 5.73 0 3.359-3.455 7.117-5.722 9.426z">
+            </path>
             <path
-              d="M12 5.987c-1.93 0-3.5 1.57-3.5 3.5s1.57 3.5 3.5 3.5 3.5-1.57 3.5-3.5-1.57-3.5-3.5-3.5zm0 5c-.827 0-1.5-.673-1.5-1.5s.673-1.5 1.5-1.5 1.5.673 1.5 1.5-.673 1.5-1.5 1.5z"
-            ></path>
+              d="M12 5.987c-1.93 0-3.5 1.57-3.5 3.5s1.57 3.5 3.5 3.5 3.5-1.57 3.5-3.5-1.57-3.5-3.5-3.5zm0 5c-.827 0-1.5-.673-1.5-1.5s.673-1.5 1.5-1.5 1.5.673 1.5 1.5-.673 1.5-1.5 1.5z">
+            </path>
           </svg>
         </div>
         <div class="content ml-2">

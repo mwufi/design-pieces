@@ -1,8 +1,7 @@
 <head>
-  <link
-    href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-    rel="stylesheet"
-  />
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     .inline-grid {
       grid-template-columns: repeat(8, 50px);
@@ -11,6 +10,7 @@
       width: 100%;
       height: 100%;
     }
+
     .inside {
       border-radius: 3px;
       background: #fdd835;
@@ -23,16 +23,20 @@
       box-shadow: 0 0.15rem 0 #ff8f00;
       font-weight: bold;
     }
+
     .top {
       align-self: end;
     }
+
     #space1 {
       grid-column: 6/9;
       background: #ff8f00;
     }
+
     #space2 {
       background: #ff8f00;
     }
+
     body {
       overscroll-behavior-y: none;
     }

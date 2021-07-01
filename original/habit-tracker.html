@@ -1,17 +1,11 @@
 <head>
-  <link
-    href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-    rel="stylesheet"
-  />
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <script src="https://unpkg.com/vue@next"></script>
   <link href="../common.css" rel="stylesheet" />
   <title>Design</title>
-  <link
-    href="../public/favicon-96.png"
-    rel="icon"
-    type="image/png"
-    sizes="96x96"
-  />
+  <link href="../public/favicon-96.png" rel="icon" type="image/png" sizes="96x96" />
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;1,200&display=swap");
 
@@ -26,11 +20,13 @@
       table-layout: fixed;
       border: 1px solid black;
     }
+
     table td,
     table th {
       border: 1px solid black;
       padding: 0.5rem 1rem;
     }
+
     table thead th {
       padding: 3px;
       position: sticky;
@@ -39,6 +35,7 @@
       width: 25vw;
       background: white;
     }
+
     table td {
       background: #fff;
       padding: 4px 5px;
@@ -51,21 +48,25 @@
       text-align: left;
       position: relative;
     }
+
     table thead th:first-child {
       position: sticky;
       left: 0;
       z-index: 2;
     }
+
     table tbody th {
       position: sticky;
       left: 0;
       background: white;
       z-index: 1;
     }
+
     th,
     td {
       min-width: 40px;
     }
+
     .wide {
       width: 300px;
     }
@@ -87,10 +88,7 @@
         <tbody>
           <tr v-for="h in habits">
             <td class="border sticky left-0">
-              <input
-                class="w-full p-3 outline-none focus:bg-gray-100"
-                v-model="h.name"
-              />
+              <input class="w-full p-3 outline-none focus:bg-gray-100" v-model="h.name" />
             </td>
             <td class="border" v-for="d in days">
               <input class="w-16 p-3 outline-none focus:bg-gray-100" />
@@ -99,11 +97,8 @@
           <tr>
             <td class="border sticky left-0">
               <form @submit.prevent="make" class="mb-0">
-                <input
-                  class="w-full p-3 outline-none focus:bg-gray-100"
-                  :placeholder="newHabit.placeholder"
-                  v-model="newHabit.name"
-                />
+                <input class="w-full p-3 outline-none focus:bg-gray-100" :placeholder="newHabit.placeholder"
+                  v-model="newHabit.name" />
               </form>
             </td>
             <td class="border" v-for="d in days">
