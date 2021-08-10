@@ -1,0 +1,103 @@
+<head>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/vue@next"></script>
+  <link href="/common.css" rel="stylesheet" />
+  <title>Design</title>
+  <link href="/public/favicon-96.png" rel="icon" type="image/png" sizes="96x96" />
+  <style>
+    .phone {
+      height: 600px;
+      width: 300px;
+    }
+
+    .tt {
+      max-width: 240px;
+    }
+  </style>
+</head>
+
+<body id="app">
+  <div class="demo h-full">
+    <div class="w-full h-full grid md:grid-cols-3 gap-6 text-white">
+      <div class="w-full h-full demo">
+        <div class="bg-gray-900 phone rounded-2xl p-6">
+          <div class="flex flex-col h-full w-full items-center justify-end">
+
+            <!-- image -->
+            <div class="mx-12 overflow-hidden rounded-xl">
+              <img class="h-28 w-28 rounded-xl transform transition ease-out duration-500 hover:scale-110"
+                src="https://source.unsplash.com/random/300x300" alt="image"></img>
+            </div>
+
+            <!-- Discover -->
+            <div class="mt-12 text-2xl text-gray-100">Discover</div>
+            <div class="text-gray-500 text-sm mt-6 tt text-center">Discovering all the possibility of adventures around
+              the world</div>
+
+            <!-- Buttons -->
+            <button
+              class="mt-12 rounded-full demo bg-blue-400 p-3 w-full transform transition ease-out duration-500 hover:scale-110">
+              <div class="text-xs">Continue with email</div>
+            </button>
+            <button
+              class="mt-3 rounded-full demo p-3 w-full border border-gray-600 transform transition ease-out duration-500 hover:scale-110">
+              <div class="text-xs">Continue with Google</div>
+            </button>
+
+            <!-- Disclaimer -->
+            <div class="text-gray-500 text-xs mt-8 mb-3 tt text-center">Discovering all the possibility of adventures
+              around
+              the world</div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full h-full demo">
+        <div class="bg-gray-900 phone rounded-2xl p-5">
+          <div class="flex flex-col h-full w-full items-center justify-start">
+
+            <!-- menu bar -->
+            <div class="flex justify-between w-full text-gray-300">
+              <div class="flex items-baseline text-sm">
+                <button class="w-8 h-8 rounded-full bg-gray-700 demo"> v </button>
+                <div class="ml-4">Discover</div>
+              </div>
+              <div class="overflow-hidden rounded-full">
+                <img class="h-8 w-8 rounded-full transform transition ease-out duration-500 hover:scale-110"
+                  src="https://source.unsplash.com/random/48x48" alt="image"></img>
+              </div>
+            </div>
+
+            <!-- image -->
+            <div class="mt-6 overflow-hidden rounded-xl">
+              <img class="rounded-xl transform transition ease-out duration-500 hover:scale-110"
+                src="https://source.unsplash.com/random/300x300" alt="image"></img>
+            </div>
+
+            <!-- Discover -->
+            <div class="mt-12 text-2xl text-gray-100">Discover</div>
+            <div class="text-gray-500 text-sm mt-6 tt text-center">Discovering all the possibility of adventures around
+              the world</div>
+          </div>
+
+        </div>
+      </div>
+      <div class="w-full h-full demo">
+        <div class="bg-gray-900 phone">hi</div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+  const App = {
+    data() {
+      return {
+        msg: "hi",
+      };
+    },
+  };
+  Vue.createApp(App).mount("#app");
+</script>
